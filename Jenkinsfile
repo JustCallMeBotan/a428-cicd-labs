@@ -28,7 +28,6 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 sleep(time:1,unit:"MINUTES")
-                input message: 'Selesai Menggunakan Web ? (Klik "Proceed" untuk menutup Web)'
                 sh './jenkins/scripts/kill.sh'
             }
         }
